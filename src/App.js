@@ -1,6 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/dist/style.css'
+
+var state = { phone : ''}
+
+function handleOnChange() {
+
+}
 
 function App() {
   return (
@@ -10,6 +18,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <PhoneInput defaultCountry={'us'} value={state.phone} onChange={handleOnChange} />
         <a
           className="App-link"
           href="https://reactjs.org"
